@@ -29,7 +29,7 @@ router.post('/login', isGuest(), async (req, res) => {
         res.json(token);
 
     } catch (error) {
-        res.status(err.status || 400).json({ message: error.message });
+        res.status(error.status || 400).json({ message: error.message });
     }
 });
 
